@@ -7,7 +7,8 @@ Customized Project Outline
 1. Project Setup
 Framework: Use .NET MAUI for a cross-platform app.
 Project Type: Create a Blazor Hybrid app for web and mobile compatibility.
-2. Core Functionality
+
+3. Core Functionality
 Interactive Features:
 Voice Input: Allow users to record voice notes.
 Text Input: Enable users to type notes.
@@ -19,20 +20,25 @@ Notes section: Free-writing, doodling, etc.
 Collaboration: Share your plans with other people.
 Itineraries. 
 Everyday Use: The app will help users quickly jot down thoughts, ideas, and reminders.
-3. Architecture
-Modular Design:
-Core Module: Basic note-taking functionality.
-Additional Modules:
-Voice-to-text conversion.
-Reminder notifications.
-Note categorization and search.
-Extensibility: Ensure the app can easily integrate new features like cloud sync or advanced search without major changes to the core.
+
+PASSWORDS!
+
+5. Architecture
+* Modular Design:
+* Core Module: Basic note-taking functionality.
+* Additional Modules:
+* Voice-to-text conversion.
+* Reminder notifications.
+* Note categorization and search.
+* Extensibility: Ensure the app can easily integrate new features like cloud sync or advanced search without major changes to the core.
+
 4. Data Handling
 Mock Data: Use mock data for initial development and testing.
 Database Integration: If needed, integrate a lightweight database like SQLite, ensuring it doesn’t complicate the core implementation.
-5. Coding Practices
-Branching: Implement conditional logic to handle different user inputs and scenarios (e.g., voice vs. text input).
-Loops: Use loops for repetitive tasks like iterating over notes.
-Methods: Create reusable methods for common functionalities like saving a note, setting a reminder, etc.
-Classes: Design classes to encapsulate data and behavior, promoting code reusability and organization (e.g., Note, Reminder, Category classes).
+
+6. Coding Practices
+* Branching: Implement conditional logic to handle different user inputs and scenarios (e.g., voice vs. text input).
+* Loops: Use loops for repetitive tasks like iterating over notes.
+* Methods: Create reusable methods for common functionalities like saving a note, setting a reminder, etc.
+* Classes: Design classes to encapsulate data and behavior, promoting code reusability and organization (e.g., Note, Reminder, Category classes).
 
