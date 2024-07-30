@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MentalNotesNew.View.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+         
+//need data folder + demo before lunch - adding folder called Data 
+//add collection view to the main page, set it up so that it can bind to the notification list
+            // the issue you have to think about that the 1:1 - view and the view model
+            // main page view - bind to view model 
+            // fine as long as the data is to the view model - what if the data isn't in the view model?
+            // data is not in view model 
+            // one to many relationship 
+
+            <CollectionView
+             Grid.Row="0"
+             ItemsSource="{Binding UserList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
+                     x:DataType="model:User">
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                             Grid.Column="0"
+                             Text="{Binding Name}"
+                             FontAttributes="Bold"/>
+                            <Image
+                             Grid.RowSpan="2"
+                             Grid.Column="1"
+                             Source="checkmark.png"
+                             IsVisible="{Binding IsRegistered}"
+                             Aspect="AspectFill"
+                             HeightRequest="25"
+                             WidthRequest="25"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button
+            Text="Register"
+            Command="{Binding UpdateRegistrationsCommand}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
